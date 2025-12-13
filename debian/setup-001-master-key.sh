@@ -11,11 +11,6 @@
     pb_key_type="ssh-rsa";
     pb_key_content="AAAAB3NzaC1yc2EAAAADAQABAAABAQCn5mH5RDQp3XUDCilcCJOmu41NQa9MddyOdUTbA8OPGexPFGVOSKMoY3Rg7f6jRmnVUNM5NPwRlQ+dgospiPT9zGzYf6MMB5lWiCgakshmUaub8X+tQrpOJhj17OjDZdwKhWhl38MUeXl8yD3MY/DM0WS66OMz3mB0W33PNm1q9pCNBQHNpErD9Au3aOOhDHekVqeUwKXg555VJJUZ/y+9f3oUZYJ8wHsoZYgbscQh89J4ouUkC4mXFLAk/KVO12hLSKnpTj8pIt76Slc6Ic/zvm6RFegcUNOeIoh/cm1j/l6RIL/s6b9i+WsLZPtwTFTZjI/2KnXXBZlqnt1QLXqt";
 
-    # Rafael
-    rp_key_name="rafaelpereira@localhost";
-    rp_key_type="ssh-ed25519";
-    rp_key_content="AAAAC3NzaC1lZDI1NTE5AAAAIFeoc+WALVSdcizOBZPcio2NYTuNvdwTY/19ztXLCIfa";
-
     # Injetar chave de confianca
     inject_key(){
         key_name="$1";
@@ -34,7 +29,6 @@
     mkdir -p /root/.ssh;
     touch "$AKFILE";
     inject_key "$pb_key_name" "$pb_key_type" "$pb_key_content";
-    inject_key "$rp_key_name" "$rp_key_type" "$rp_key_content";
 
 
 exit 0;
